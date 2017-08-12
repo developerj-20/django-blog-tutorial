@@ -4,18 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Base HTML Template</title>
-    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
-    <div class="container">
+<!--Django Tutorial-->
+    <div class="page-header">
+        <h1><a href="/">Django Girls Blog</a></h1>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+<!-- End Django Tutorial-->
+
+    <!--<div class="container">
         <div class="nav-button">
             <button class="menu-toggle">Menu</button>
         </div><!--nav-button-->
-        <div class="nav-wrapper"><!--for fixed nav-->
-            <nav class="flexNav">
+        <!--<div class="nav-wrapper"><!--for fixed nav-->
+            <!--<nav class="flexNav">
                 <a class="current" href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="articles.html">Articles</a>
@@ -23,6 +37,7 @@
             </nav>
         </div>
         <header>
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             <h1>Journey Through JavaScript</h1>
             <p>and Sass, React, and Node, Python, PHP,...</p>
         </header>
@@ -35,7 +50,7 @@
                     </div>
                 </section>
                 <!--<div class="section-spacer"><p>More Articles</p></div>-->
-                <section class="more-articles-wrapper">
+                <!--<section class="more-articles-wrapper">
                 <div class="more-articles">
                     <div class="post">
                         <div class="bg-image-container been-doing"></div>
@@ -67,10 +82,10 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>-->
 
-            </div><!--.inner-->
-            <aside>
+            <!--</div><!--.inner-->
+            <!--<aside>
                     <div class="aside-sec">
                         <div class="aside-content social-info">
                             <div class="social"><a href="https://twitter.com/jamey_ya"><i class="fa fa-twitter"
@@ -104,7 +119,7 @@
                             <div>
                                 <a href="articles.html#php">PHP</a>
                             </div>
-                        </div>
+                        </div>-->
                         <!--<div class="aside-content related-articles">
                             <div class="rel-wrapper">
                                 <div class="rel-art-1 image-container"></div>
@@ -119,10 +134,10 @@
                         </div><!--.related-articles-->
                     </div>
                 </aside>
-            </div><!--.inner-wrapper-->
-            <footer>
+            <!--</div><!--.inner-wrapper-->
+            <!--<footer>
                 <p>&copy; 2017 Jamie Y</p>
             </footer>
-        </div><!--.container-->
+        <!--</div><!--.container-->
 </body>
 </html>

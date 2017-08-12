@@ -1,4 +1,56 @@
-body {
+/* Django Tutorial CSS */
+
+.page-header {
+    background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}
+
+
+/*Journey Through Javascript css*/
+
+/*body {
   margin: 0;
   padding: 0; }
 
@@ -20,7 +72,7 @@ h2 {
   font-size: 2rem;
   font-weight: normal; }
 
-h3 {
+ h3 {
   font-size: 1.5rem; }
 
 p, a {
@@ -36,11 +88,11 @@ header {
     color: #2aa1c0;
     font-size: 1.3rem;
     text-align: center; }
-
+*/
 /***********************************************************************************************************************
                                                          Nav
 ***********************************************************************************************************************/
-.flexNav {
+/*.flexNav {
   background-color: rgba(178, 0, 0, 0.9);
   height: 40vh;
   display: none;
@@ -55,7 +107,6 @@ header {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 0;
-  /*order: -1;*/
   align-self: flex-end;
   width: 100%; }
   .flexNav a {
@@ -74,7 +125,6 @@ header {
   -ms-flex-align: center;
   align-items: center;
   background-color: #2aa1c0;
-  /*order: -1;*/
   align-self: flex-end;
   margin-bottom: .5em; }
 
@@ -89,11 +139,11 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-
+*/
 /***********************************************************************************************************************
                                                    Home Page Styles
 ***********************************************************************************************************************/
-.inner-wrapper {
+/*.inner-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -162,11 +212,11 @@ aside {
   flex-direction: column;
   align-items: center;
   background-color: #6a0000; }
-
+*/
 /*********************************************
                 Aside Social
  ********************************************/
-.social-info {
+/*.social-info {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -190,11 +240,11 @@ aside {
       color: #0e647d; }
     .social-info .social:hover {
       border: 2px solid #0e647d; }
-
+*/
 /*********************************************
                 Aside Articles
 *********************************************/
-.related {
+/*.related {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -205,20 +255,20 @@ aside {
     transition: all 0.3s ease-in-out; }
     .related a:hover {
       color: #2aa1c0; }
-
+*/
 /***********************************************************************************************************************
                                                    About Page Styles
 ***********************************************************************************************************************/
-.about {
+/*.about {
   width: 90%; }
   .about p {
     text-indent: 1.5em;
     line-height: 1.9; }
-
+*/
 /***********************************************************************************************************************
                                                    Articles Page Styles
 ***********************************************************************************************************************/
-.inner-wrapper .categories {
+/*.inner-wrapper .categories {
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -239,11 +289,11 @@ aside {
 .inner-wrapper .related div {
   display: flex;
   flex-direction: column; }
-
+*/
 /*********************************************
                     Footer
  ********************************************/
-footer {
+/*footer {
   width: 100%;
   color: #e6e6e6;
   background-color: #000;
@@ -251,28 +301,25 @@ footer {
   height: 100%; }
   footer p {
     font-size: 1rem; }
-
+*/
 /***********************************************************************************************************************
                                            Media Queries
 ***********************************************************************************************************************/
-@media (min-width: 764px) {
+/*@media (min-width: 764px) {*/
  /****************************************
        More Articles Media Query
 ****************************************/
-  .more-articles {
+ /* .more-articles {
     align-items: center;
     justify-content: center; }
     .more-articles .post {
       width: 60%; } }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) {*/
   /****************************************
               Nav Media Query
   ****************************************/
-  .menu-toggle {
+ /* .menu-toggle {
     display: none; }
-    /*.container {
-        position: relative;
-    }*/
     .nav-wrapper {
         position: fixed;
         width: 100%;
@@ -301,11 +348,11 @@ footer {
         color: #2aa1c0; }
     .flexNav .current {
       color: #2aa1c0; }
-
+*/
   /****************************************
            More Articles Media Query
   ****************************************/
-  .more-articles .post {
+ /* .more-articles .post {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -348,15 +395,11 @@ footer {
 @media (min-width: 1200px) {
     .inner section, .about {
         width: 70%;
-    }
-
-    /*.inner section{
-        width: 70%;
     }*/
     /****************************************
               Home Media Query
     ****************************************/
-    .inner-wrapper {
+   /* .inner-wrapper {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -368,7 +411,6 @@ footer {
     }
 
     .inner-wrapper aside {
-        /*position: ;*/
         width: 30%;
         height: auto;
     }
@@ -399,20 +441,6 @@ footer {
         display: flex;
         flex-direction: column;
     }
-
-    /*.section-spacer {
-        width: 70%;
-        background-color: #6a0000;
-        align-self: center;
-        border-radius: 30px;
-    }
-
-
-
-    .section-spacer p {
-        color: #e6e6e6;
-        text-align: center;
-    }*/
 
     .inner {
         display: flex;
@@ -487,7 +515,6 @@ footer {
     }
 
     footer .social-info {
-        /*align-self: center;*/
         width: 30%;
     }
 
@@ -503,7 +530,6 @@ footer {
 
     .footer-title {
         width: 40%;
-        /*width: 30%;*/
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -515,7 +541,6 @@ footer {
 
     footer .learning {
         width: 30%;
-        /*align-self: center;*/
 
     }
     .learning ul {
@@ -543,3 +568,4 @@ footer {
         background-color: #6a0000;
     }
 }
+*/

@@ -9,127 +9,18 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
     <link href="{% static 'css/blog.css' %}" rel="stylesheet" >
 </head>
-<body>
-    <div class="container">
-        <div class="nav-button">
-            <button class="menu-toggle">Menu</button>
-        </div><!--nav-button-->
-        <div class="nav-wrapper"><!--for fixed nav-->
-            <nav class="flexNav">
-                <a class="current" href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="articles.html">Articles</a>
-                <a href="https://jy16.github.io/">Portfolio</a>
-            </nav>
-        </div>
-        <header>
-            <h1>Journey Through JavaScript</h1>
-            <p>and Sass, React, and Node, Python, PHP,...</p>
-        </header>
-        <div class="inner-wrapper">
-            <div class="inner">
-                <section class="latest-post">
-                    {% block content %}
-                        {% for post in posts %}
-                            <div class="post">
-                                <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-                                <div class="date">
-                                    <p>{{ post.published_date }}</p>
-                                </div>
-                                    <p>{{ post.text|linebreaksbr }}</p>
-                            </div>
-                        {% endfor %}
-                    {% endblock %}
-                </section>
-                <!--<div class="section-spacer"><p>More Articles</p></div>-->
-                <section class="more-articles-wrapper">
-                <div class="more-articles">
-                    <div class="post">
-                        <div class="bg-image-container been-doing"></div>
-                        <div class="date-title-p">
-                            <div class="title">
-                                <p class="title">What I've Been Doing</p>
-                                <p class="date">June 1, 2017</p>
-                            </div>
-                            <p>
-                                Hello! Since Memorial Day weekend, I've been learning some Python, Bootstrap 4,
-                                accessibility,
-                                abd object-oriented JavaScript.
-                            </p>
-                            <div class="rd-more"><a href="what-i-have-been-doing.html">Read</a></div>
-                        </div>
-                    </div>
-                    <div class="post gsap">
-                        <div class="bg-image-container gsap"></div>
-                        <div class="date-title-p">
-                            <div class="title">
-                                <p class="title">Playing with Some GSAP Animations</p>
-                                <p class="date">May 23, 2017</p>
-                            </div>
-                            <p>
-                                Over the weekend I was looking at some GSAP Animation tutorials. GSAP was not as hard to get
-                                started with as I thought it would be.
-                            </p>
-                            <div class="rd-more"><a href="what-i-have-been-doing.html">Read</a></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <body>
 
-            </div><!--.inner-->
-            <aside>
-                    <div class="aside-sec">
-                        <div class="aside-content social-info">
-                            <div class="social"><a href="https://twitter.com/jamey_ya"><i class="fa fa-twitter"
-                                                                                        aria-hidden="true"></i></a></div>
-                            <div class="social"><a href="http://www.linkedin.com/in/jamie-y-936539121"><i class="fa fa-linkedin"
-                                                                                                        aria-hidden="true"></i></a>
-                            </div>
-                            <div class="social"><a href="mailto:email@email.com"><i class="fa fa-envelope-o"
-                                                                                    aria-hidden="true"></i></a></div>
-                            <div class="social"><a href="http://codepen.io/jy16/"><i class="fa fa-codepen"
-                                                                                    aria-hidden="true"></i></a></div>
-                            <div class="social"><a href="https://github.com/JY16"><i class="fa fa-github"
-                                                                                    aria-hidden="true"></i></a></div>
-                        </div>
-                        <div class="aside-content related">
-                            <div>
-                                <a href="articles.html#javascript">JavaScript</a>
-                            </div>
-                            <div>
-                                <a href="articles.html#react">React</a>
-                            </div>
-                            <div>
-                                <a href="articles.html#css">CSS</a>
-                            </div>
-                            <div>
-                                <a href="articles.html#sass">Sass</a>
-                            </div>
-                            <div>
-                                <a href="articles.html#python">Python</a>
-                            </div>
-                            <div>
-                                <a href="articles.html#php">PHP</a>
-                            </div>
-                        </div>
-                        <!--<div class="aside-content related-articles">
-                            <div class="rel-wrapper">
-                                <div class="rel-art-1 image-container"></div>
-                                <div class="rel-art-info"><a href="#"><p>Article Title</p><p>Link To Article</p></a></div>
-                            </div>
-                            <div class="rel-art-2 image-container">
-                                <p>Link To Article</p>
-                            </div>
-                            <div class="rel-art-3 image-container">
-                                <p>Link To Article</p>
-                            </div>
-                        </div><!--.related-articles-->
-                    </div>
-                </aside>
-            </div><!--.inner-wrapper-->
-            <footer>
-                <p>&copy; 2017 Jamie Y</p>
-            </footer>
-        </div><!--.container-->
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
     </body>
 </html>
