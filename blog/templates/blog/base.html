@@ -12,6 +12,9 @@
 <body>
 <!--Django Tutorial-->
     <div class="page-header">
+        {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        {% endif %}
         <h1><a href="/">Django Girls Blog</a></h1>
     </div>
     <div class="content container">
@@ -44,7 +47,7 @@
         <div class="inner-wrapper">
             <div class="inner">
                 <section class="latest-post">
-                    
+
                 </section>
                 <!--<div class="section-spacer"><p>More Articles</p></div>-->
                 <!--<section class="more-articles-wrapper">

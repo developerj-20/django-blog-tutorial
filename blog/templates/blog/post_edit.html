@@ -6,7 +6,6 @@
     <title>Title</title>
 </head>
 <body>
-    <div class="container">
         {% block content %}
         <h1>New Post</h1>
         <form method="POST" class="post-form">{% csrf_token %}
@@ -14,6 +13,5 @@
             <button type="submit" class="save btn btn-default">Save</button>
         </form>
         {% endblock %}
-    </div>
 </body>
 </html>
