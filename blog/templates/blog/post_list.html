@@ -5,22 +5,26 @@
 <head>
     <meta charset="UTF-8">
     <title>JTJ</title>
-    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link href="{% static 'css/blog.css' %}" rel="stylesheet" >
 </head>
     <body>
-
-{% block content %}
-    {% for post in posts %}
-        <div class="post">
-            <div class="date">
-                {{ post.published_date }}
-            </div>
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+        <div class="page-header">
+            <h1><a href="/">Django Girls Blog</a></h1>
         </div>
-    {% endfor %}
-{% endblock %}
+        {% block content %}
+            {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        {{ post.published_date }}
+                    </div>
+                    <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                    <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+                </div>
+            {% endfor %}
+        {% endblock content %}
     </body>
 </html>
